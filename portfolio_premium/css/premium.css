@@ -88,3 +88,26 @@ body{transition:background .3s,color .3s}
 .lab-voip .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-voip .lab-info strong{color:var(--text);margin-right:6px}
 .project-card:has(.lab-voip) .shot{display:none}
 @media(max-width:700px){.lab-voip{overflow-x:auto}.lab-voip svg{min-width:560px}}
+
+/* Lab du projet 03 */
+.lab-ad{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--net:var(--accent-2);--dom:var(--accent)}
+[data-theme=light] .lab-ad{background:#fff}
+.lab-ad svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
+.lab-ad .lab-tools{flex-wrap:wrap}.lab-ad .lab-tools button{display:inline-flex;align-items:center;gap:8px}
+.lab-ad .dot{width:18px;height:3px;border-radius:2px}.lab-ad .dot-n{background:var(--net)}.lab-ad .dot-d{background:var(--dom)}
+.lab-ad .f-net.wire,.lab-ad .pkt.f-net{stroke:var(--net);fill:var(--net)}
+.lab-ad .f-dom.wire,.lab-ad .pkt.f-dom{stroke:var(--dom);fill:var(--dom)}
+.lab-ad .wl.f-net{fill:var(--net)}.lab-ad .wl.f-dom{fill:var(--dom)}.lab-ad .wl.ls{text-anchor:start}
+.arr-n{fill:var(--accent-2)}.arr-d{fill:var(--accent)}
+.lab-ad .f-net,.lab-ad .f-dom{transition:opacity .4s}
+.lab-ad[data-state=net] .f-dom,.lab-ad[data-state=dom] .f-net{opacity:.12}
+.lab-ad .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
+.lab-ad .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
+.lab-ad .link{fill:none;stroke:var(--muted);stroke-width:1.5;opacity:.5}
+.lab-ad .n-srv rect,.lab-ad .n-cl rect{fill:var(--card);stroke:var(--muted)}
+.lab-ad .n-net rect{fill:rgba(110,168,254,.12);stroke:var(--net)}
+.lab-ad .n-dom rect{fill:rgba(85,214,190,.1);stroke:var(--dom)}
+.lab-ad .node:hover rect,.lab-ad .node.on rect{stroke-width:2.8}
+.lab-ad .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-ad .lab-info strong{color:var(--text);margin-right:6px}
+.project-card:has(.lab-ad) .shot{display:none}
+@media(max-width:700px){.lab-ad{overflow-x:auto}.lab-ad svg{min-width:560px}}

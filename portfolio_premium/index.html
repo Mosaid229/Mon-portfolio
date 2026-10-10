@@ -99,7 +99,7 @@
       </div>
     </section>
 
-    <div class="container counters reveal"><div><b data-count="10" data-suffix="+">0</b><span>projets réalisés</span></div><div><b data-count="9">0</b><span>domaines techniques</span></div><div><b data-count="2">0</b><span>formations</span></div><div><b data-count="1">0</b><span>stage en entreprise</span></div></div>
+    <div class="container counters reveal"><div><b data-count="10" data-suffix="+">0</b><span>projets réalisés</span></div><div><b data-count="9">0</b><span>domaines techniques</span></div><div><b data-count="5">0</b><span>formations</span></div><div><b data-count="3">0</b><span>stage en entreprise</span></div></div>
 
     <section id="competences" class="section section-dark">
 <div class="container">
@@ -213,6 +213,41 @@
           </article>
 
           <article class="project-card reveal">
+            <div class="lab-ad" data-state="all">
+              <div class="lab-tools">
+                <button data-state="all" aria-pressed="true">Tout</button>
+                <button data-state="net" aria-pressed="false"><i class="dot dot-n"></i>Adressage et noms (DHCP · DNS)</button>
+                <button data-state="dom" aria-pressed="false"><i class="dot dot-d"></i>Domaine (AD · GPO)</button>
+              </div>
+              <svg viewBox="0 0 800 430" role="img" aria-label="Architecture Active Directory : un serveur Windows fournit DHCP, DNS, Active Directory et GPO à trois postes clients, dans un environnement virtualisé">
+                <defs>
+                  <marker id="aN" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="arr-n"/></marker>
+                  <marker id="aD" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="arr-d"/></marker>
+                  <path id="n1" d="M285 196V250H140V328"/><path id="n2" d="M285 196V250H375V328"/><path id="n3" d="M285 196V250H610V328"/>
+                  <path id="d1" d="M515 196V285H190V328"/><path id="d2" d="M515 196V285H425V328"/><path id="d3" d="M515 196V285H660V328"/>
+                </defs>
+                <rect class="vm" x="10" y="8" width="780" height="414" rx="20"/><text class="vml" x="30" y="32">Environnement virtualisé</text>
+                <path class="link" d="M400 110V125M285 140V125H515V140"/>
+                <path class="wire f-net" d="M285 196V250"/><path class="wire f-net" d="M140 250H610"/>
+                <path class="wire f-net" d="M140 250V328" marker-end="url(#aN)"/><path class="wire f-net" d="M375 250V328" marker-end="url(#aN)"/><path class="wire f-net" d="M610 250V328" marker-end="url(#aN)"/>
+                <path class="wire f-dom" d="M515 196V285"/><path class="wire f-dom" d="M190 285H660"/>
+                <path class="wire f-dom" d="M190 285V328" marker-end="url(#aD)"/><path class="wire f-dom" d="M425 285V328" marker-end="url(#aD)"/><path class="wire f-dom" d="M660 285V328" marker-end="url(#aD)"/>
+                <text class="wl ls f-net" x="297" y="228">Adressage et noms</text><text class="wl ls f-dom" x="527" y="228">Comptes · stratégies</text>
+                <circle r="4.5" class="pkt f-net"><animateMotion dur="3.2s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#n1"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-net"><animateMotion dur="3.2s" begin="1s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#n2"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-net"><animateMotion dur="3.2s" begin="2s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#n3"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-dom"><animateMotion dur="3.2s" begin=".5s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#d1"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-dom"><animateMotion dur="3.2s" begin="1.5s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#d2"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-dom"><animateMotion dur="3.2s" begin="2.5s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#d3"/></animateMotion></circle>
+                <g class="node n-srv" data-k="srv" tabindex="0" role="button" aria-label="Windows Server"><rect x="290" y="40" width="220" height="70" rx="14"/><text x="400" y="72">Windows Server</text><text class="sub" x="400" y="94">Contrôleur de domaine</text></g>
+                <g class="node n-net" data-k="net" tabindex="0" role="button" aria-label="DHCP et DNS"><rect x="180" y="140" width="210" height="56" rx="12"/><text x="285" y="164">DHCP · DNS</text><text class="sub" x="285" y="184">Adresses IP et noms</text></g>
+                <g class="node n-dom" data-k="dom" tabindex="0" role="button" aria-label="Active Directory et GPO"><rect x="410" y="140" width="210" height="56" rx="12"/><text x="515" y="164">AD DS · GPO</text><text class="sub" x="515" y="184">Utilisateurs et règles</text></g>
+                <g class="node n-cl" data-k="cl" tabindex="0" role="button" aria-label="Poste client 1"><rect x="70" y="330" width="190" height="70" rx="14"/><text x="165" y="362">Poste client 1</text><text class="sub" x="165" y="383">Membre du domaine</text></g>
+                <g class="node n-cl" data-k="cl" tabindex="0" role="button" aria-label="Poste client 2"><rect x="305" y="330" width="190" height="70" rx="14"/><text x="400" y="362">Poste client 2</text><text class="sub" x="400" y="383">Membre du domaine</text></g>
+                <g class="node n-cl" data-k="cl" tabindex="0" role="button" aria-label="Poste client 3"><rect x="540" y="330" width="190" height="70" rx="14"/><text x="635" y="362">Poste client 3</text><text class="sub" x="635" y="383">Membre du domaine</text></g>
+              </svg>
+              <p class="lab-info" aria-live="polite">Clique sur une machine ou un service pour voir son rôle.</p>
+            </div>
             <div class="project-number">03</div>
             <p class="project-type">WINDOWS · ADMINISTRATION</p>
             <h3>Infrastructure Active Directory</h3>
