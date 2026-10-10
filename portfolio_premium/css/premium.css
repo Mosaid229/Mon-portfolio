@@ -134,3 +134,26 @@ body{transition:background .3s,color .3s}
 .project-card:has(.lab-lamp) .shot{display:none}
 @media(max-width:700px){.lab-lamp{overflow-x:auto}.lab-lamp svg{min-width:560px}}
 
+/* Lab du projet 05 */
+.lab-dual{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--adm:var(--accent-2);--auth:var(--accent)}
+[data-theme=light] .lab-dual{background:#fff}
+.lab-dual svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
+.lab-dual .lab-tools{flex-wrap:wrap}.lab-dual .lab-tools button{display:inline-flex;align-items:center;gap:8px}
+.lab-dual .dot{width:18px;height:3px;border-radius:2px}.lab-dual .dot-m{background:var(--adm)}.lab-dual .dot-u{background:var(--auth)}
+.lab-dual .f-adm.wire,.lab-dual .pkt.f-adm{stroke:var(--adm);fill:var(--adm)}
+.lab-dual .f-auth.wire,.lab-dual .pkt.f-auth{stroke:var(--auth);fill:var(--auth)}
+.lab-dual .wl.f-adm{fill:var(--adm)}.lab-dual .wl.f-auth{fill:var(--auth)}.lab-dual .wl.ls{text-anchor:start}.lab-dual .wl.le{text-anchor:end}
+.arr-m{fill:var(--accent-2)}.arr-u{fill:var(--accent)}
+.lab-dual .f-adm,.lab-dual .f-auth{transition:opacity .4s}
+.lab-dual[data-state=adm] .f-auth,.lab-dual[data-state=auth] .f-adm{opacity:.12}
+.lab-dual .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
+.lab-dual .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
+.lab-dual .n-box rect{fill:var(--card);stroke:var(--muted)}
+.lab-dual .n-dc rect{stroke:var(--text);stroke-opacity:.55}
+.lab-dual .node:hover rect,.lab-dual .node.on rect{stroke:var(--accent);stroke-opacity:1;stroke-width:2.8}
+.lab-dual .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-dual .lab-info strong{color:var(--text);margin-right:6px}
+.project-card:has(.lab-dual) .shot{display:none}
+@media(max-width:700px){.lab-dual{overflow-x:auto}.lab-dual svg{min-width:560px}}
+
+
+
