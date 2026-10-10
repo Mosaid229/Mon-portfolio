@@ -259,6 +259,39 @@
           </article>
 
           <article class="project-card reveal">
+            <div class="lab-lamp" data-state="all">
+              <div class="lab-tools">
+                <button data-state="all" aria-pressed="true">Tout</button>
+                <button data-state="dns" aria-pressed="false"><i class="dot dot-q"></i>Flux DNS</button>
+                <button data-state="web" aria-pressed="false"><i class="dot dot-w"></i>Flux web (LAMP)</button>
+              </div>
+              <svg viewBox="0 0 800 430" role="img" aria-label="Architecture : un poste client interroge les serveurs DNS primaire et secondaire, puis accède à un serveur web LAMP composé d'Apache, PHP et MariaDB">
+                <defs>
+                  <marker id="aQ" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="arr-q"/></marker>
+                  <marker id="aW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="arr-w"/></marker>
+                  <path id="q1" d="M105 150V80H250"/><path id="q2" d="M430 80H570"/>
+                  <path id="h1" d="M105 230V355H255"/><path id="h2" d="M385 355H440"/><path id="h3" d="M570 355H625"/>
+                </defs>
+                <rect class="vm" x="230" y="12" width="545" height="110" rx="16"/><text class="vml" x="250" y="34">Serveurs DNS (Ubuntu)</text>
+                <rect class="vm" x="230" y="265" width="545" height="150" rx="16"/><text class="vml" x="250" y="290">Serveur web (LAMP)</text>
+                <path class="wire f-dns" d="M105 150V80H248" marker-end="url(#aQ)"/><path class="wire f-dns" d="M432 80H568" marker-end="url(#aQ)"/>
+                <path class="wire f-web" d="M105 230V355H253" marker-end="url(#aW)"/><path class="wire f-web" d="M385 355H438" marker-end="url(#aW)"/><path class="wire f-web" d="M570 355H623" marker-end="url(#aW)"/>
+                <text class="wl f-dns" x="170" y="70">Requête DNS</text><text class="wl f-dns" x="500" y="70">Transfert de zone</text><text class="wl f-web" x="180" y="345">Requête HTTP</text>
+                <circle r="4.5" class="pkt f-dns"><animateMotion dur="2.8s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#q1"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-dns"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#q2"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-dns"><animateMotion dur="2s" begin="1s" repeatCount="indefinite"><mpath href="#q2"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-web"><animateMotion dur="2.8s" begin=".4s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#h1"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-web"><animateMotion dur="2.2s" begin=".8s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#h2"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-web"><animateMotion dur="2.2s" begin="1.2s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#h3"/></animateMotion></circle>
+                <g class="node n-cl" data-k="cl" tabindex="0" role="button" aria-label="Poste client"><rect x="20" y="150" width="170" height="80" rx="14"/><text x="105" y="184">Poste client</text><text class="sub" x="105" y="206">Navigateur</text></g>
+                <g class="node n-dns" data-k="pri" tabindex="0" role="button" aria-label="Serveur DNS primaire"><rect x="250" y="48" width="180" height="64" rx="12"/><text x="340" y="76">DNS primaire</text><text class="sub" x="340" y="96">Zone d'origine</text></g>
+                <g class="node n-dns" data-k="sec" tabindex="0" role="button" aria-label="Serveur DNS secondaire"><rect x="570" y="48" width="180" height="64" rx="12"/><text x="660" y="76">DNS secondaire</text><text class="sub" x="660" y="96">Copie de la zone</text></g>
+                <g class="node n-lamp" data-k="apa" tabindex="0" role="button" aria-label="Apache"><rect x="255" y="320" width="130" height="70" rx="12"/><text x="320" y="351">Apache</text><text class="sub" x="320" y="372">Serveur web</text></g>
+                <g class="node n-lamp" data-k="php" tabindex="0" role="button" aria-label="PHP"><rect x="440" y="320" width="130" height="70" rx="12"/><text x="505" y="351">PHP</text><text class="sub" x="505" y="372">Pages dynamiques</text></g>
+                <g class="node n-lamp" data-k="mar" tabindex="0" role="button" aria-label="MariaDB"><rect x="625" y="320" width="130" height="70" rx="12"/><text x="690" y="351">MariaDB</text><text class="sub" x="690" y="372">Base de données</text></g>
+              </svg>
+              <p class="lab-info" aria-live="polite">Clique sur une machine ou un service pour voir son rôle.</p>
+            </div>
             <div class="project-number">04</div>
             <p class="project-type">LINUX · SERVICES</p>
             <h3>Serveurs DNS et Web</h3>

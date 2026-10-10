@@ -1,8 +1,8 @@
-// ===== À MODIFIER : tes infos en un seul endroit =====
+// ===== À MODIFIER : mes infos en un seul endroit =====
 window.CFG={
   email:'bolawole2003@gmail.com',
   linkedin:'https://www.linkedin.com/in/mosa%C3%AFd-achamou-daouda-660380278/',
-  github:'https://github.com/TON-PSEUDO',
+  github:'https://github.com/Mosaid229',
   // projets de DÉVELOPPEMENT uniquement : nom du dépôt GitHub de chacun (dans l'ordre de la page).
   // Vide = lien vers ton profil. Les projets systèmes & réseaux n'ont pas de bouton GitHub.
   devRepos:['','',''],
