@@ -304,9 +304,6 @@
             <div class="tags"><span>Bind9</span><span>Apache2</span><span>MariaDB</span><span>PHP</span></div>
           </article>
 
-
-
-
           <article class="project-card reveal">
             <div class="lab-dual" data-state="all">
               <div class="lab-tools">
@@ -349,13 +346,38 @@
             </p>
             <div class="tags"><span>Windows Server</span><span>AD DS</span><span>Samba AD DC</span><span>LDAP</span><span>GPO</span></div>
           </article>
-
-
-
-
-
           
           <article class="project-card reveal">
+            <div class="lab-pfs" data-state="all">
+              <div class="lab-tools">
+                <button data-state="all" aria-pressed="true">Tout</button>
+                <button data-state="pre" aria-pressed="false"><i class="dot dot-p"></i>Avant authentification</button>
+                <button data-state="post" aria-pressed="false"><i class="dot dot-g"></i>Après authentification</button>
+              </div>
+              <svg viewBox="0 100 800 260" role="img" aria-label="Architecture : un poste utilisateur se connecte au portail captif pfSense, qui bloque Internet avant l'authentification et l'autorise ensuite">
+                <defs>
+                  <marker id="aP" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="arr-p"/></marker>
+                  <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" class="arr-g"/></marker>
+                  <path id="r1" d="M190 205H360"/><path id="r2" d="M582 205H640"/><path id="r3" d="M190 245H360"/><path id="r4" d="M580 245H665"/>
+                </defs>
+                <rect class="vm" x="10" y="110" width="590" height="240" rx="20"/><text class="vml" x="30" y="136">Réseau virtualisé</text>
+                <path class="wire f-pre" d="M192 205H358" marker-end="url(#aP)"/>
+                <path class="wire f-no" d="M582 205H640"/><path class="no-x f-no" d="M644 199l12 12M656 199l-12 12"/>
+                <path class="wire f-ok" d="M192 245H358" marker-end="url(#aG)"/><path class="wire f-ok" d="M582 245H663" marker-end="url(#aG)"/>
+                <text class="wl f-pre" x="275" y="194">Connexion au portail</text><text class="wl f-no" x="618" y="192">Bloqué</text>
+                <text class="wl f-ok" x="275" y="274">Trafic autorisé</text><text class="wl f-ok" x="622" y="234">Autorisé</text>
+                <circle r="4.5" class="pkt f-pre"><animateMotion dur="2.6s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#r1"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-pre"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#r1"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-no"><animate attributeName="opacity" values="1;1;0" keyTimes="0;.8;1" dur="1.8s" repeatCount="indefinite"/><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#r2"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-ok"><animateMotion dur="2.6s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#r3"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-ok"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#r3"/></animateMotion></circle>
+                <circle r="4.5" class="pkt f-ok"><animateMotion dur="2.2s" begin=".6s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#r4"/></animateMotion></circle>
+                <g class="node n-box" data-k="cl" tabindex="0" role="button" aria-label="Poste utilisateur"><rect x="30" y="185" width="160" height="80" rx="14"/><text x="110" y="218">Poste utilisateur</text><text class="sub" x="110" y="240">Navigateur</text></g>
+                <g class="node n-box n-fw" data-k="pfs" tabindex="0" role="button" aria-label="pfSense, pare-feu et portail captif"><rect x="360" y="170" width="220" height="110" rx="14"/><text x="470" y="208">pfSense</text><text class="sub" x="470" y="230">Pare-feu</text><text class="sub" x="470" y="250">Portail captif</text></g>
+                <g class="node n-box" data-k="net" tabindex="0" role="button" aria-label="Internet"><rect x="665" y="185" width="125" height="80" rx="14"/><text x="727" y="218">Internet</text><text class="sub" x="727" y="240">Réseau externe</text></g>
+              </svg>
+              <p class="lab-info" aria-live="polite">Clique sur une machine pour voir son rôle.</p>
+            </div>    
             <div class="project-number">06</div>
             <p class="project-type">FIREWALL · CONTRÔLE D'ACCÈS</p>
             <h3>Portail captif pfSense</h3>
@@ -371,19 +393,83 @@
         <h3 class="group-title reveal">Développement web</h3>
         <div class="projects-grid">
           <article class="project-card dev reveal">
+            <div class="mock-web">
+              <svg viewBox="0 0 800 450" role="img" aria-label="Maquette du portfolio dans une fenêtre de navigateur : barre de navigation, présentation, compétences et projets">
+                <rect class="mw-win" x="10" y="10" width="780" height="430" rx="14"/>
+                <path class="mw-bar" d="M10 52V24a14 14 0 0 1 14-14h752a14 14 0 0 1 14 14v28z"/>
+                <circle cx="34" cy="31" r="5" fill="#ff5f57"/><circle cx="52" cy="31" r="5" fill="#febc2e"/><circle cx="70" cy="31" r="5" fill="#28c840"/>
+                <rect class="mw-url" x="100" y="21" width="420" height="20" rx="10"/><text class="mw-mono" x="116" y="35">index.html</text>
+                <text class="mw-logo" x="34" y="75">MD</text>
+                <g class="mw-nav"><text x="380" y="73">À propos</text><text x="445" y="73">Compétences</text><text x="525" y="73">Projets</text><text x="578" y="73">Lab</text><text x="612" y="73">CV</text><text x="645" y="73">Contact</text></g>
+                <circle class="mw-line" cx="752" cy="69" r="9"/>
+                <text class="mw-mono mw-acc" x="40" y="118">Bienvenue sur mon portfolio</text>
+                <text class="mw-h1" x="40" y="156">Bonjour, je suis Mosaïd</text>
+                <text class="mw-sub" x="40" y="182">Administrateur systèmes et réseaux</text>
+                <rect class="mw-btn" x="40" y="204" width="132" height="28" rx="8"/><text class="mw-btn-t" x="106" y="222" text-anchor="middle">Voir mes projets</text>
+                <rect class="mw-line" x="184" y="204" width="150" height="28" rx="8"/><text class="mw-txt" x="259" y="222" text-anchor="middle">Télécharger mon CV</text>
+                <rect class="mw-term" x="470" y="98" width="280" height="136" rx="10"/>
+                <circle cx="486" cy="112" r="3.5" fill="#2a3544"/><circle cx="499" cy="112" r="3.5" fill="#2a3544"/><circle cx="512" cy="112" r="3.5" fill="#2a3544"/>
+                <g class="mw-mono mw-t"><text x="486" y="142" fill="#55d6be">$ ansible-playbook site.yml</text><text x="486" y="162" fill="#9aa8b8">PLAY RECAP … ok=12 failed=0</text><text x="486" y="186" fill="#6ea8fe">$ systemctl status rsyslog</text><text x="486" y="206" fill="#55d6be">● active (running)</text></g>
+                <rect class="mw-cur" x="600" y="196" width="6" height="12"/>
+                <text class="mw-h2" x="40" y="262">Compétences</text>
+                <g class="mw-card"><rect x="40" y="272" width="164" height="50" rx="10"/><rect x="222" y="272" width="164" height="50" rx="10"/><rect x="404" y="272" width="164" height="50" rx="10"/><rect x="586" y="272" width="164" height="50" rx="10"/></g>
+                <g class="mw-txt mw-ct"><text x="54" y="292">Linux</text><text x="236" y="292">Windows Server</text><text x="418" y="292">Cisco</text><text x="600" y="292">Virtualisation</text></g>
+                <g class="mw-track"><rect x="54" y="302" width="136" height="6" rx="3"/><rect x="236" y="302" width="136" height="6" rx="3"/><rect x="418" y="302" width="136" height="6" rx="3"/><rect x="600" y="302" width="136" height="6" rx="3"/></g>
+                <g class="mw-fill"><rect x="54" y="302" width="122" height="6" rx="3"/><rect x="236" y="302" width="116" height="6" rx="3"/><rect x="418" y="302" width="102" height="6" rx="3"/><rect x="600" y="302" width="122" height="6" rx="3"/></g>
+                <text class="mw-h2" x="40" y="348">Projets</text>
+                <g class="mw-card"><rect x="40" y="358" width="222" height="68" rx="10"/><rect x="284" y="358" width="222" height="68" rx="10"/><rect x="528" y="358" width="222" height="68" rx="10"/></g>
+                <g class="mw-acc mw-mono"><text x="54" y="376">01</text><text x="298" y="376">02</text><text x="542" y="376">03</text></g>
+                <g class="mw-txt mw-ct"><text x="54" y="396">Automatisation des logs</text><text x="298" y="396">Téléphonie IP</text><text x="542" y="396">Infrastructure AD</text></g>
+                <g class="mw-ph"><rect x="54" y="406" width="150" height="5" rx="2.5"/><rect x="298" y="406" width="120" height="5" rx="2.5"/><rect x="542" y="406" width="140" height="5" rx="2.5"/></g>
+              </svg>
+            </div>
             <div class="project-number">DEV 01</div>
-            <p class="project-type">DÉVELOPPEMENT · À COMPLÉTER</p>
-            <h3>Projet de développement 1</h3>
-            <p>Décris ici ton projet : objectif, technologies utilisées et résultat.</p>
-            <div class="tags"><span>Langage</span><span>Framework</span></div>
+            <p class="project-type">WEB · FRONT-END</p>
+            <h3>Mon portfolio interactif</h3>
+            <p>
+              Conception et développement de mon portfolio en HTML, CSS et JavaScript,
+              sans framework : site responsive avec mode clair et sombre, animations
+              au défilement, CV intégré et schémas d'infrastructure animés en SVG
+              pour présenter mes projets systèmes et réseaux.
+            </p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
           </article>
 
           <article class="project-card dev reveal">
+            <div class="mock-con">
+              <svg viewBox="0 0 800 450" role="img" aria-label="Maquette du jeu RPG dans une console : combat contre un gobelin avec barres de vie et menu d'actions">
+                <rect class="mc-win" x="10" y="10" width="780" height="430" rx="10"/>
+                <path class="mc-bar" d="M10 46V20a10 10 0 0 1 10-10h760a10 10 0 0 1 10 10v26z"/>
+                <rect x="26" y="20" width="16" height="16" rx="3" fill="#0c0c0c" stroke="#8a8a8a"/><path d="M30 25l4 3-4 3M36 31h3" fill="none" stroke="#cccccc" stroke-width="1.5"/>
+                <text class="mc-title" x="54" y="33">RPG_Game.exe</text>
+                <path d="M706 28h12" stroke="#cccccc" stroke-width="1.5"/><rect x="738" y="22" width="11" height="11" fill="none" stroke="#cccccc" stroke-width="1.5"/><path d="M767 22l11 11M778 22l-11 11" stroke="#cccccc" stroke-width="1.5"/>
+                <rect x="10" y="46" width="780" height="394" rx="0" fill="#0c0c0c"/>
+                <path d="M10 430v0a10 10 0 0 0 10 10h760a10 10 0 0 0 10-10v-10H10z" fill="#0c0c0c"/>
+                <g class="mc-t">
+                  <text class="mc-y" x="36" y="84">=== LA FORÊT SOMBRE ===</text>
+                  <text x="36" y="118">Vous entrez dans une forêt sombre…</text>
+                  <text x="36" y="142">Un gobelin surgit et vous barre la route !</text>
+                  <text class="mc-c" x="36" y="192">Héros</text><text class="mc-c" x="344" y="192">80/100</text><text class="mc-g" x="440" y="192">Niv. 3</text>
+                  <text class="mc-r" x="36" y="222">Gobelin</text><text class="mc-r" x="344" y="222">25/50</text>
+                  <text class="mc-g" x="36" y="260">Vous infligez 12 dégâts au gobelin !</text>
+                  <text class="mc-w" x="36" y="302">Que faites-vous ?</text>
+                  <text x="36" y="330">1. Attaquer</text><text x="36" y="354">2. Utiliser une potion</text><text x="36" y="378">3. Fuir</text>
+                  <text class="mc-g" x="36" y="414">&gt;</text>
+                </g>
+                <rect class="mc-hp" x="124" y="179" width="200" height="14" fill="#1f3a30"/><rect class="mc-hp" x="124" y="179" width="160" height="14" fill="#3fcf8e"/>
+                <rect class="mc-hp" x="124" y="209" width="200" height="14" fill="#3d1d21"/><rect class="mc-hp" x="124" y="209" width="100" height="14" fill="#e74856"/>
+                <rect class="mc-cur" x="56" y="400" width="10" height="17"/>
+              </svg>
+            </div>
             <div class="project-number">DEV 02</div>
-            <p class="project-type">DÉVELOPPEMENT · À COMPLÉTER</p>
-            <h3>Projet de développement 2</h3>
-            <p>Décris ici ton projet : objectif, technologies utilisées et résultat.</p>
-            <div class="tags"><span>Langage</span><span>Framework</span></div>
+            <p class="project-type">C# · JEU VIDÉO</p>
+            <h3>RPG d'aventure en console</h3>
+            <p>
+              Développement d'un mini jeu d'aventure en mode console en C#.
+              La solution Visual Studio est organisée en trois projets : le jeu,
+              une bibliothèque partagée et un éditeur, versionnés sur GitHub.
+            </p>
+            <div class="tags"><span>C#</span><span>.NET</span><span>Console</span><span>Git</span></div>
           </article>
 
           <article class="project-card dev reveal">
@@ -449,10 +535,10 @@
           </p>
         </div>
         <div class="contact-links">
-          <!-- Remplace les liens ci-dessous par tes vraies coordonnées -->
           <a href="mailto:bolawole2003@gmail.com">✉️ bolawole2003@gmail.com</a>
           <a href="https://www.linkedin.com/in/mosa%C3%AFd-achamou-daouda-660380278/" target="_blank" rel="noopener">in LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">⌘ GitHub</a>
+          <a href="https://github.com/mosaid-daouda" target="_blank" rel="noopener">⌘ GitHub</a>
+          <a href="tel:+33762740638">📞 07 62 74 06 38</a>
           <a class="btn btn-primary" href="images/Cv_Mosaid.pdf" download>Télécharger mon CV</a>
         </div>
       </div>

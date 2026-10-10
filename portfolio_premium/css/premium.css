@@ -155,5 +155,68 @@ body{transition:background .3s,color .3s}
 .project-card:has(.lab-dual) .shot{display:none}
 @media(max-width:700px){.lab-dual{overflow-x:auto}.lab-dual svg{min-width:560px}}
 
+/* Lab du projet 06 */
+.lab-pfs{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--pre:var(--accent-2);--ok:var(--accent);--deny:#f07178}
+[data-theme=light] .lab-pfs{background:#fff;--deny:#d64550}
+.lab-pfs svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
+.lab-pfs .lab-tools{flex-wrap:wrap}.lab-pfs .lab-tools button{display:inline-flex;align-items:center;gap:8px}
+.lab-pfs .dot{width:18px;height:3px;border-radius:2px}.lab-pfs .dot-p{background:var(--pre)}.lab-pfs .dot-g{background:var(--ok)}
+.lab-pfs .f-pre.wire,.lab-pfs .pkt.f-pre{stroke:var(--pre);fill:var(--pre)}
+.lab-pfs .f-ok.wire,.lab-pfs .pkt.f-ok{stroke:var(--ok);fill:var(--ok)}
+.lab-pfs .f-no.wire,.lab-pfs .pkt.f-no{stroke:var(--deny);fill:var(--deny)}
+.lab-pfs .no-x{fill:none;stroke:var(--deny);stroke-width:2.8;stroke-linecap:round}
+.lab-pfs .wl.f-pre{fill:var(--pre)}.lab-pfs .wl.f-ok{fill:var(--ok)}.lab-pfs .wl.f-no{fill:var(--deny)}
+.arr-p{fill:var(--accent-2)}.arr-g{fill:var(--accent)}
+.lab-pfs .f-pre,.lab-pfs .f-no,.lab-pfs .f-ok{transition:opacity .4s}
+.lab-pfs[data-state=pre] .f-ok,.lab-pfs[data-state=post] .f-pre,.lab-pfs[data-state=post] .f-no{opacity:.12}
+.lab-pfs .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
+.lab-pfs .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
+.lab-pfs .n-box rect{fill:var(--card);stroke:var(--muted)}
+.lab-pfs .n-fw rect{stroke:var(--text);stroke-opacity:.55}
+.lab-pfs .node:hover rect,.lab-pfs .node.on rect{stroke:var(--accent);stroke-opacity:1;stroke-width:2.8}
+.lab-pfs .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-pfs .lab-info strong{color:var(--text);margin-right:6px}
+.project-card:has(.lab-pfs) .shot{display:none}
+@media(max-width:700px){.lab-pfs{overflow-x:auto}.lab-pfs svg{min-width:560px}}
 
+/* Maquette navigateur (projet DEV 01) */
+.mock-web{order:-1;margin-bottom:18px;border-radius:14px;overflow:hidden}
+.mock-web svg{display:block;width:100%;height:auto}
+.mock-web .mw-win{fill:var(--bg);stroke:var(--border);stroke-width:1.5}
+.mock-web .mw-bar{fill:var(--bg-soft);stroke:var(--border);stroke-width:1.5}
+.mock-web .mw-url{fill:var(--bg);stroke:var(--border)}
+.mock-web .mw-mono{font:11px "JetBrains Mono",monospace;fill:var(--muted)}
+.mock-web .mw-t{font-size:11.5px}
+.mock-web .mw-acc{fill:var(--accent)}
+.mock-web .mw-logo{font:700 15px Inter,sans-serif;fill:var(--accent)}
+.mock-web .mw-nav{font:11px Inter,sans-serif;fill:var(--muted)}
+.mock-web .mw-line{fill:none;stroke:var(--border);stroke-width:1.5}
+.mock-web .mw-h1{font:700 30px Inter,sans-serif;fill:var(--text)}
+.mock-web .mw-sub{font:15px Inter,sans-serif;fill:var(--accent)}
+.mock-web .mw-h2{font:700 14px Inter,sans-serif;fill:var(--text)}
+.mock-web .mw-btn{fill:var(--accent)}
+.mock-web .mw-btn-t{font:600 11.5px Inter,sans-serif;fill:#04141a}
+[data-theme=light] .mock-web .mw-btn-t{fill:#fff}
+.mock-web .mw-txt{font:600 11.5px Inter,sans-serif;fill:var(--text)}
+.mock-web .mw-ct{font-size:12px}
+.mock-web .mw-term{fill:#0a1119;stroke:var(--border);stroke-width:1.5}
+.mock-web .mw-cur{fill:#55d6be;animation:mwblink 1s steps(1) infinite}
+.mock-web .mw-card rect{fill:var(--card);stroke:var(--border);stroke-width:1.5}
+.mock-web .mw-track rect{fill:var(--border)}
+.mock-web .mw-fill rect{fill:var(--accent)}
+.mock-web .mw-ph rect{fill:var(--border)}
+@keyframes mwblink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.mock-web .mw-cur{animation:none}}
+.project-card:has(.mock-web) .shot{display:none}
 
+/* Maquette console (projet DEV 02) */
+.mock-con{order:-1;margin-bottom:18px;border-radius:12px;overflow:hidden}
+.mock-con svg{display:block;width:100%;height:auto}
+.mock-con .mc-win{fill:#0c0c0c;stroke:var(--border);stroke-width:1.5}
+.mock-con .mc-bar{fill:#1b1b1b}
+.mock-con .mc-title{font:12px "Segoe UI",Inter,sans-serif;fill:#cccccc}
+.mock-con .mc-t{font:16px "JetBrains Mono",Consolas,monospace;fill:#cccccc}
+.mock-con .mc-y{fill:#f9f1a5}.mock-con .mc-c{fill:#61d6d6}.mock-con .mc-r{fill:#e74856}.mock-con .mc-g{fill:#3fcf8e}.mock-con .mc-w{fill:#fff}
+.mock-con .mc-cur{fill:#cccccc;animation:mwblink 1s steps(1) infinite}
+@keyframes mwblink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.mock-con .mc-cur{animation:none}}
+.project-card:has(.mock-con) .shot{display:none}
