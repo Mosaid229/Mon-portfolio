@@ -22,7 +22,6 @@
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#projets">Projets</a></li>
-        <li><a href="#lab">Lab</a></li>
         <li><a href="#parcours">Parcours</a></li>
         <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -114,7 +113,7 @@
           <article class="tech-card reveal"><div class="tech-logo"><i class="devicon-apache-plain"></i></div><h3>Services Web</h3><p>Déploiement de services web sous Linux.</p><div class="tags"><span>Apache</span><span>Nginx</span><span>PHP</span><span>MariaDB</span></div></article>
           <article class="tech-card reveal"><div class="tech-logo"><i class="devicon-bash-plain"></i></div><h3>Bash</h3><p>Scripts et automatisation de tâches système.</p><div class="tags"><span>Shell</span><span>Scripts</span><span>Linux</span></div></article>
           <article class="tech-card reveal"><div class="tech-logo"><span class="security-symbol">⌁</span></div><h3>Sécurité & logs</h3><p>Audit, journalisation et contrôle d'accès.</p><div class="tags"><span>Auditd</span><span>Rsyslog</span><span>Fail2ban</span></div></article>
-          <article class="tech-card reveal"><div class="tech-logo"><span class="security-symbol">⌁</span></div><h3>Programmation & Developpement web</h3><p></p><div class="tags"><span>C</span><span>C++</span><span>C#</span><span>Python</span><span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span><span>SQL</span></div></article>
+          <article class="tech-card reveal"><div class="tech-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div><h3>Programmation & Developpement web</h3><p></p><div class="tags"><span>C</span><span>C++</span><span>C#</span><span>Python</span><span>HTML</span><span>CSS</span><span>Javascript</span><span>PHP</span><span>SQL</span></div></article>
         </div>
       </div>
     </section>
@@ -472,46 +471,69 @@
             <div class="tags"><span>C#</span><span>.NET</span><span>Console</span><span>Git</span></div>
           </article>
 
-          <article class="project-card dev reveal">
+          <!--<article class="project-card dev reveal">
+            <div class="mock-py">
+              <svg viewBox="0 0 800 450" role="img" aria-label="Maquette d'un éditeur de code Python avec le fichier bissextile.py et un terminal qui exécute le programme de casino">
+                <rect class="mp-win" x="10" y="10" width="780" height="430" rx="12"/>
+                <path class="mp-bar" d="M10 44V22a12 12 0 0 1 12-12h756a12 12 0 0 1 12 12v22z"/>
+                <circle cx="32" cy="27" r="5" fill="#ff5f57"/><circle cx="50" cy="27" r="5" fill="#febc2e"/><circle cx="68" cy="27" r="5" fill="#28c840"/>
+                <text class="mp-ui" x="400" y="31" text-anchor="middle">Projet_python</text>
+                <rect class="mp-side" x="10" y="44" width="180" height="396"/>
+                <text class="mp-cap" x="26" y="70">EXPLORATEUR</text>
+                <text class="mp-ui mp-b" x="26" y="96">▾ PROJET_PYTHON</text>
+                <rect class="mp-sel" x="10" y="106" width="180" height="26"/>
+                <g class="mp-ui"><text x="44" y="124">bissextile.py</text><text x="44" y="150">casino_mosaid.py</text><text x="44" y="176">casion.py</text></g>
+                <g fill="#3b8eea"><rect x="26" y="113" width="8" height="8" rx="2"/><rect x="26" y="139" width="8" height="8" rx="2"/><rect x="26" y="165" width="8" height="8" rx="2"/></g>
+                <g fill="#f7d54a"><rect x="30" y="117" width="8" height="8" rx="2" opacity=".9"/><rect x="30" y="143" width="8" height="8" rx="2" opacity=".9"/><rect x="30" y="169" width="8" height="8" rx="2" opacity=".9"/></g>
+                <rect class="mp-tab" x="190" y="44" width="170" height="32"/><rect x="190" y="44" width="170" height="2" fill="#3fcf8e"/><text class="mp-ui" x="208" y="65">bissextile.py</text>
+                <rect class="mp-edit" x="190" y="76" width="600" height="186"/>
+                <g class="mp-ln"><text x="220" y="104" text-anchor="end">1</text><text x="220" y="128" text-anchor="end">2</text><text x="220" y="152" text-anchor="end">3</text><text x="220" y="176" text-anchor="end">4</text><text x="220" y="200" text-anchor="end">5</text><text x="220" y="224" text-anchor="end">6</text></g>
+                <g class="mp-code">
+                  <text x="244" y="104">annee = <tspan class="f">int</tspan>(<tspan class="f">input</tspan>(<tspan class="s">"Saisissez une année : "</tspan>))</text>
+                  <text x="244" y="152"><tspan class="k">if</tspan> annee % <tspan class="n">400</tspan> == <tspan class="n">0</tspan> <tspan class="k">or</tspan> (annee % <tspan class="n">4</tspan> == <tspan class="n">0</tspan> <tspan class="k">and</tspan> annee % <tspan class="n">100</tspan> != <tspan class="n">0</tspan>):</text>
+                  <text x="278" y="176"><tspan class="f">print</tspan>(annee, <tspan class="s">"est une année bissextile"</tspan>)</text>
+                  <text x="244" y="200"><tspan class="k">else</tspan>:</text>
+                  <text x="278" y="224"><tspan class="f">print</tspan>(annee, <tspan class="s">"n'est pas bissextile"</tspan>)</text>
+                </g>
+                <rect class="mp-term" x="190" y="262" width="600" height="178"/><rect x="190" y="262" width="600" height="1" fill="#2a3544"/>
+                <text class="mp-cap" x="208" y="284">TERMINAL</text>
+                <g class="mp-tx">
+                  <text x="208" y="312"><tspan class="g">$</tspan> python casino_mosaid.py</text>
+                  <text x="208" y="334">Vous avez 1000 $.</text>
+                  <text x="208" y="356">Sur quel numéro misez-vous (0-49) ? <tspan class="n">17</tspan></text>
+                  <text x="208" y="378">Combien misez-vous ? <tspan class="n">100</tspan></text>
+                  <text x="208" y="400">La roulette s'arrête sur le 17. Bravo !</text>
+                  <text x="208" y="424"><tspan class="g">$</tspan></text>
+                </g>
+                <rect class="mp-cur" x="222" y="413" width="8" height="14"/>
+              </svg>
+            </div>
             <div class="project-number">DEV 03</div>
-            <p class="project-type">DÉVELOPPEMENT · À COMPLÉTER</p>
-            <h3>Projet de développement 3</h3>
-            <p>Décris ici ton projet : objectif, technologies utilisées et résultat.</p>
-            <div class="tags"><span>Langage</span><span>Framework</span></div>
-          </article>
+            <p class="project-type">PYTHON · ALGORITHMIQUE</p>
+            <h3>Travaux pratiques en Python</h3>
+            <p>
+              Série de petits travaux pratiques en Python publiés sur GitHub :
+              un TP de casino, amélioré après une première version, et un programme
+              qui détermine si une année est bissextile.
+            </p>
+            <div class="tags"><span>Python</span><span>Git</span><span>GitHub</span><span>Algorithmique</span></div>
+          </article> -->
         </div>
-      </div>
-    </section>
-
-    <section id="lab" class="section section-dark">
-      <div class="container">
-      <div class="section-heading reveal"><p class="eyebrow">Infrastructure Lab</p><h2>Mon laboratoire Ansible et logs.</h2><p class="section-intro">Clique sur une machine pour voir son rôle, ou isole un flux.</p></div>
-      <div class="lab-tools reveal"><button data-flow="all" aria-pressed="true">Tout</button><button data-flow="deploy" aria-pressed="false">Déploiement</button><button data-flow="logs" aria-pressed="false">Journaux</button></div>
-      <div class="lab reveal" data-flow="all">
-      <svg viewBox="0 0 800 260" role="img" aria-label="Schéma : le nœud maître Ansible configure le nœud administré, qui envoie ses journaux au serveur de logs">
-      <path id="p1" class="wire f-dep" d="M210 130H305"/><path id="p2" class="wire f-log" d="M495 130H590"/>
-      <text class="wl f-dep" x="257" y="112">SSH</text><text class="wl f-log" x="542" y="112">Rsyslog</text>
-      <circle r="5" class="pkt f-dep"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
-      <circle r="5" class="pkt f-dep"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
-      <circle r="5" class="pkt f-log"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
-      <circle r="5" class="pkt f-log"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
-      <g class="node" data-k="master" tabindex="0" role="button" aria-label="Nœud maître Ansible"><rect x="20" y="80" width="190" height="100" rx="14"/><text x="115" y="125">Nœud maître</text><text class="sub" x="115" y="148">Ansible</text></g>
-      <g class="node" data-k="managed" tabindex="0" role="button" aria-label="Nœud administré"><rect x="305" y="80" width="190" height="100" rx="14"/><text x="400" y="125">Nœud administré</text><text class="sub" x="400" y="148">Auditd</text></g>
-      <g class="node" data-k="logs" tabindex="0" role="button" aria-label="Serveur de logs"><rect x="590" y="80" width="190" height="100" rx="14"/><text x="685" y="125">Serveur de logs</text><text class="sub" x="685" y="148">Rsyslog central</text></g>
-      </svg>
-      <p id="lab-info" aria-live="polite">Toutes les machines tournent sous Ubuntu.</p>
-      </div>
       </div>
     </section>
 
     <section id="parcours" class="section">
       <div class="container">
         <div class="section-heading reveal"><p class="eyebrow">04 · PARCOURS</p><h2>Formation & expériences.</h2><p class="section-intro">Un parcours construit autour de la pratique et de l'administration des infrastructures.</p></div>
-          <div class="experience-timeline">
-          <article class="experience reveal"><div class="experience-visual"><i class="devicon-linux-plain"></i><span>LINUX</span></div><div class="experience-content"><small>2025 — Aujourd'hui</small><h3>Bachelor — Coordinateur de Projet Informatique</h3><strong>ENIGMA · Lille</strong><p>Formation orientée systèmes, réseaux, cloud et cybersécurité, avec une approche basée sur des projets pratiques.</p><div class="tags"><span>Systèmes</span><span>Réseaux</span><span>Cloud</span></div></div></article>
-          <article class="experience reveal"><div class="experience-visual"><i class="devicon-ubuntu-plain"></i><span>IT-NUM</span></div><div class="experience-content"><small>2024</small><h3>Stage informatique</h3><strong>IT-Num</strong><p>Administration systèmes et réseaux, virtualisation, services Linux/Windows et réalisation d'un projet de téléphonie IP.</p><div class="tags"><span>Linux</span><span>Windows Server</span><span>VoIP</span></div></div></article>
-          <article class="experience reveal"><div class="experience-visual"><i class="devicon-windows11-original"></i><span>ASSRI</span></div><div class="experience-content"><small>2024</small><h3>Licence — Audit Sécurité des Systèmes et Réseaux Informatiques</h3><strong>ESGIS · Cotonou</strong><p>Formation en systèmes, réseaux et sécurité des infrastructures informatiques.</p><div class="tags"><span>Audit</span><span>Réseaux</span><span>Sécurité</span></div></div></article>
-          <article class="experience reveal"><div class="experience-visual"><span class="big-letter">D</span><span>BAC</span></div><div class="experience-content"><small>2021</small><h3>Baccalauréat scientifique D</h3><strong>Mention Assez Bien</strong><p>Point de départ de mon parcours scientifique et informatique.</p></div></article>
+        <div class="experience-timeline">
+          <article class="experience reveal"><div class="experience-visual"><svg class="cap" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>MASTERE</span></div><div class="experience-content"><small>2026 — 2028 · En cours</small><h3>Mastère — Systèmes, Réseaux et Cloud Computing</h3><strong>ENIGMA · Lille</strong><p>Cursus orienté vers le métier d'ingénieur systèmes et réseaux, pour approfondir les systèmes, les réseaux et le cloud computing. Diplôme prévu en 2028.</p><div class="tags"><span>Systèmes</span><span>Réseaux</span><span>Cloud</span></div></div></article>
+          <article class="experience reveal"><div class="experience-visual"><svg class="cap" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>BACHELOR</span></div><div class="experience-content"><small>2025 — 2026</small><h3>Bachelor — Coordinateur de Projets Informatique</h3><strong>ENIGMA · Lille</strong><p>Formation orientée systèmes, réseaux, cloud et cybersécurité, avec une approche basée sur des projets pratiques.</p><div class="tags"><span>Systèmes</span><span>Réseaux</span><span>Cloud</span></div></div></article>
+          <article class="experience reveal"><div class="experience-visual"><i class="devicon-ubuntu-plain"></i><span>IT-NUM</span></div><div class="experience-content"><small>Mars — Juin 2024</small><h3>Stage — Hosting et Sécurité</h3><strong>IT-Num</strong><p>Approfondissement de l'administration systèmes et réseaux : environnement virtualisé de plus de 5 machines virtuelles, DNS redondant avec BIND9, pile LAMP, pare-feu pfSense avec portail captif, domaines Windows (AD DS) et Linux (Samba AD DC) et solution VoIP sécurisée avec Asterisk.</p><div class="tags"><span>Linux</span><span>Windows Server</span><span>pfSense</span><span>VoIP</span></div></div></article>
+          <article class="experience reveal"><div class="experience-visual"><svg class="cap" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>ASSRI</span></div><div class="experience-content"><small>2024</small><h3>Licence Professionnelle — Audit et Sécurité des Systèmes et Réseaux Informatiques (ASSRI)</h3><strong>ESGIS · Cotonou</strong><p>Formation en audit et en sécurité des systèmes et réseaux informatiques, avec un examen passé en 2024 pour l'obtention du diplôme.</p><div class="tags"><span>Audit</span><span>Réseaux</span><span>Sécurité</span></div></div></article>
+          <article class="experience reveal"><div class="experience-visual"><span class="big-letter">T</span><span>TRIPLEX</span></div><div class="experience-content"><small>Août — Septembre 2023</small><h3>Stage — Maintenance informatique</h3><strong>TRIPLEX INSTITUT</strong><p>Détection et résolution de pannes, installation et mise à jour des systèmes d'exploitation (Windows, Linux, macOS) et des pilotes, maintenance préventive et corrective.</p><div class="tags"><span>Dépannage</span><span>Windows</span><span>Linux</span><span>macOS</span></div></div></article>
+          <article class="experience reveal"><div class="experience-visual"><svg class="cap" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>LICENCE</span></div><div class="experience-content"><small>2021 — 2024</small><h3>Licence — Systèmes, Réseaux et Cloud Computing</h3><strong>ESGIS · Cotonou</strong><p>Trois années de formation en systèmes, réseaux et cloud computing, qui m'ont donné les bases de l'administration Windows et Linux et des réseaux.</p><div class="tags"><span>Systèmes</span><span>Réseaux</span><span>Cloud</span></div></div></article>
+          <article class="experience reveal"><div class="experience-visual"><svg class="cap" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg><span>BAC</span></div><div class="experience-content"><small>2021</small><h3>Baccalauréat scientifique D</h3><strong>Mention Assez Bien</strong><p>Point de départ de mon parcours scientifique et informatique.</p></div></article>
+        </div>
         </div>
       </div>
     </section>

@@ -220,3 +220,24 @@ body{transition:background .3s,color .3s}
 @keyframes mwblink{50%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.mock-con .mc-cur{animation:none}}
 .project-card:has(.mock-con) .shot{display:none}
+
+/* Chapeau diplôme */
+.experience-visual svg.cap{position:relative;z-index:2;width:6rem;height:6rem;color:var(--accent);animation:float 4s ease-in-out infinite}
+@media(max-width:600px){.experience-visual svg.cap{width:4.5rem;height:4.5rem}}
+@media(prefers-reduced-motion:reduce){.experience-visual svg.cap{animation:none}}
+
+/* Maquette éditeur Python (projet DEV 03) 
+.mock-py{order:-1;margin-bottom:18px;border-radius:14px;overflow:hidden}
+.mock-py svg{display:block;width:100%;height:auto}
+.mock-py .mp-win{fill:#0d1117;stroke:var(--border);stroke-width:1.5}
+.mock-py .mp-bar{fill:#161b22}.mock-py .mp-side{fill:#0a0e14}.mock-py .mp-tab{fill:#0d1117}.mock-py .mp-edit{fill:#0d1117}.mock-py .mp-term{fill:#0a0e14}.mock-py .mp-sel{fill:#1b2431}
+.mock-py .mp-ui{font:12px Inter,sans-serif;fill:#c9d1d9}.mock-py .mp-b{font-weight:600}
+.mock-py .mp-cap{font:600 10px Inter,sans-serif;fill:#8b949e;letter-spacing:.08em}
+.mock-py .mp-ln{font:13px "JetBrains Mono",Consolas,monospace;fill:#6e7681}
+.mock-py .mp-code{font:14px "JetBrains Mono",Consolas,monospace;fill:#c9d1d9}
+.mock-py .mp-tx{font:13px "JetBrains Mono",Consolas,monospace;fill:#c9d1d9}
+.mock-py .k{fill:#ff7b72}.mock-py .f{fill:#d2a8ff}.mock-py .s{fill:#a5d6ff}.mock-py .n{fill:#79c0ff}.mock-py .g{fill:#3fcf8e}
+.mock-py .mp-cur{fill:#c9d1d9;animation:mwblink 1s steps(1) infinite}
+@keyframes mwblink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.mock-py .mp-cur{animation:none}}
+.project-card:has(.mock-py) .shot{display:none} */
