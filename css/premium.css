@@ -226,6 +226,10 @@ body{transition:background .3s,color .3s}
 @media(max-width:600px){.experience-visual svg.cap{width:4.5rem;height:4.5rem}}
 @media(prefers-reduced-motion:reduce){.experience-visual svg.cap{animation:none}}
 
+/* Correctif mobile : une carte projet ne doit plus élargir toute la page */
+.projects-grid>*{min-width:0}
+@media(max-width:850px){.projects-grid{grid-template-columns:minmax(0,1fr)}}
+
 /* Maquette éditeur Python (projet DEV 03) 
 .mock-py{order:-1;margin-bottom:18px;border-radius:14px;overflow:hidden}
 .mock-py svg{display:block;width:100%;height:auto}
