@@ -1,186 +1,168 @@
-.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:200;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn-secondary{border:1px solid var(--border);color:var(--text)}.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}.btn-sm{padding:8px 14px;font-size:.85rem;margin-top:18px}
-.terminal-card{background:#0a1119;border:1px solid var(--border);border-radius:14px;font:.85rem "JetBrains Mono",monospace;box-shadow:0 30px 70px rgba(0,0,0,.35)}.terminal-top{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid var(--border)}.terminal-top span{width:10px;height:10px;border-radius:50%;background:#2a3544}.terminal-body{padding:18px}.terminal-body p{margin:2px 0}.green,.success{color:var(--accent)}.blue{color:var(--accent-2)}.output{color:var(--muted)}.cursor{animation:blink 1s infinite}
-.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:start}.about-text p{color:var(--muted);margin-bottom:18px}
-.about-card{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photo{grid-column:1/-1;width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;border:1px solid var(--border)}
-.stat{border:1px solid var(--border);border-radius:12px;padding:14px;background:var(--card)}.stat strong{display:block}.stat span{color:var(--muted);font-size:.8rem}
-.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:40px 0 0;text-align:center}.counters b{display:block;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;color:var(--accent)}.counters span{color:var(--muted);font-size:.85rem}
-.level{display:flex;align-items:center;gap:12px;margin-top:18px}.meter{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width 1.4s cubic-bezier(.2,.7,.2,1)}.in .meter i{width:calc(var(--v)*1%)}.level b{font:600 .8rem "JetBrains Mono",monospace;color:var(--accent);min-width:44px;text-align:right}
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project-card{border:1px solid var(--border);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.035),var(--card));padding:22px;display:flex;flex-direction:column;transition:border-color .3s}.project-card:hover{border-color:rgba(85,214,190,.45)}.project-card.featured{grid-column:1/-1}.project-number{color:var(--accent);font:600 .8rem "JetBrains Mono",monospace}.project-type{color:var(--muted);font-size:.78rem;margin:2px 0 8px}.project-card h3{margin-bottom:8px}.project-card p:not(.project-type){color:var(--muted);font-size:.92rem}.project-card .btn{align-self:flex-start}
-.group-title{font-size:1.3rem;margin:0 0 18px}.group-title:not(:first-of-type){margin-top:56px}
-.shot{order:-1;border:1px solid var(--border);border-radius:10px;overflow:hidden;padding:0;margin-bottom:18px;background:#0a1119;cursor:zoom-in}.shot img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}.shot:hover img{transform:scale(1.04)}
-.lightbox{position:fixed;inset:0;z-index:300;background:rgba(4,7,12,.92);display:grid;place-items:center;padding:4%;opacity:0;pointer-events:none;transition:opacity .3s;cursor:zoom-out}.lightbox.open{opacity:1;pointer-events:auto}.lightbox img{max-width:100%;max-height:100%;border-radius:10px}
-.section{position:relative}.section:before{content:"";position:absolute;top:0;left:50%;width:min(92%,var(--max));height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform:translateX(-50%) scaleX(0);transition:transform 1.3s ease}.section.in:before{transform:translateX(-50%) scaleX(1)}
-.lab-tools{display:flex;gap:8px;margin-bottom:20px}.lab-tools button{background:none;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:8px 14px;font:inherit;font-size:.85rem;cursor:pointer}.lab-tools button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
-.lab{border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px}.lab svg{display:block;width:100%;height:auto}
-.wire{fill:none;stroke-width:2;stroke-dasharray:6 6;animation:dash 1s linear infinite}.f-dep.wire,.pkt.f-dep{stroke:var(--accent);fill:var(--accent)}.f-log.wire,.pkt.f-log{stroke:var(--accent-2);fill:var(--accent-2)}.wire{fill:none!important}.wl{font:12px "JetBrains Mono",monospace;text-anchor:middle}.wl.f-dep{fill:var(--accent)}.wl.f-log{fill:var(--accent-2)}
-.node{cursor:pointer;outline:none}.node rect{fill:var(--card);stroke:var(--border);stroke-width:1.5;transition:.3s}.node:hover rect,.node:focus-visible rect,.node.on rect{stroke:var(--accent);fill:#12202a}.node text{fill:var(--text);font:600 15px Inter,sans-serif;text-anchor:middle}.node .sub{fill:var(--muted);font:12px "JetBrains Mono",monospace}
-.lab[data-flow=deploy] .f-log,.lab[data-flow=logs] .f-dep{opacity:.12}.lab .f-dep,.lab .f-log{transition:opacity .4s}
-#lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}#lab-info strong{color:var(--text);margin-right:6px}
-.cv-box{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:#0a1119;margin-bottom:22px}.cv-frame{display:block;width:100%;height:min(80vh,760px)}.cv-box p{padding:30px;color:var(--muted)}.cv-box a{color:var(--accent)}
-.contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;border:1px solid var(--border);border-radius:20px;padding:44px;background:var(--card)}.contact-box p{color:var(--muted);margin-top:12px}.contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}.contact-links a:not(.btn):hover{color:var(--accent)}
-.footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.85rem}.footer-content{display:flex;justify-content:space-between}
-.experience:before{box-shadow:0 0 0 7px var(--bg),0 0 25px rgba(85,214,190,.5)}
-@keyframes dash{to{stroke-dashoffset:-12}}
+/* 1. VARIABLES
+   Couleurs des flux des schémas : change-les ici, tous les labs suivent. */
+:root{--flow-a:var(--accent-2);--flow-b:var(--accent);--flow-deny:#f07178}
+
+
+/* 2. BASE */
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-@media(max-width:850px){.hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}.counters{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr}.about-card{grid-template-columns:repeat(2,1fr)}.photo{max-width:320px}}
-@media(prefers-reduced-motion:reduce){.pkt{display:none}.wire,.cursor{animation:none}.section:before{transform:translateX(-50%) scaleX(1);transition:none}.meter i{transition:none}html{scroll-behavior:auto}}
+@keyframes dash{to{stroke-dashoffset:-12}}
+@keyframes mwblink{50%{opacity:0}}
+
+
+/* 3. BARRE DE PROGRESSION ET SÉPARATEURS DE SECTIONS */
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:200;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left}
+.section{position:relative}
+.section:before{content:"";position:absolute;top:0;left:50%;width:min(92%,var(--max));height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);transform:translateX(-50%) scaleX(0);transition:transform 1.3s ease}
+.section.in:before{transform:translateX(-50%) scaleX(1)}
+
+
+/* 4. ACCUEIL : BOUTONS ET TERMINAL */
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn-secondary{border:1px solid var(--border);color:var(--text)}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.btn-sm{padding:8px 14px;font-size:.85rem;margin-top:18px}
+
+.terminal-card{background:#0a1119;border:1px solid var(--border);border-radius:14px;font:.85rem "JetBrains Mono",monospace;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.terminal-top{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid var(--border)}
+.terminal-top span{width:10px;height:10px;border-radius:50%;background:#2a3544}
+.terminal-body{padding:18px}
+.terminal-body p{margin:2px 0}
+.green,.success{color:var(--accent)}
+.blue{color:var(--accent-2)}
+.output{color:var(--muted)}
+.cursor{animation:blink 1s infinite}
+
+
+/* 5. À PROPOS ET COMPTEURS */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:start}
+.about-text p{color:var(--muted);margin-bottom:18px}
+.about-card{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photo{grid-column:1/-1;width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;border:1px solid var(--border)}
+.stat{border:1px solid var(--border);border-radius:12px;padding:14px;background:var(--card)}
+.stat strong{display:block}
+.stat span{color:var(--muted);font-size:.8rem}
+
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:40px 0 0;text-align:center}
+.counters b{display:block;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;color:var(--accent)}
+.counters span{color:var(--muted);font-size:.85rem}
+
+
+/* 6. COMPÉTENCES (cartes, logos, jauges de niveau) */
 .tech-logo svg{width:3.2rem;height:3.2rem}
+.level{display:flex;align-items:center;gap:12px;margin-top:18px}
+.meter{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,.08);overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.in .meter i{width:calc(var(--v)*1%)}
+.level b{font:600 .8rem "JetBrains Mono",monospace;color:var(--accent);min-width:44px;text-align:right}
 
-/* Bouton de thème */
-.theme-toggle{background:none;border:1px solid var(--border);color:var(--text);border-radius:8px;width:38px;height:38px;font-size:1rem;cursor:pointer;margin-left:16px;transition:border-color .25s}.theme-toggle:hover{border-color:var(--accent)}
-body{transition:background .3s,color .3s}
-@media(max-width:850px){.theme-toggle{margin-left:auto;margin-right:12px}}
 
-/* Mode clair */
-[data-theme=light]{color-scheme:light;--bg:#f6f8fb;--bg-soft:#eaeff5;--card:#ffffff;--border:rgba(15,23,42,.12);--text:#0f1722;--muted:#4f5d6e;--accent:#0d8a76;--accent-2:#2b63c9}
-[data-theme=light] .header{background:rgba(246,248,251,.85)}
-[data-theme=light] .btn-primary{color:#fff}
-[data-theme=light] .tech-logo{background:rgba(15,23,42,.04)}
-[data-theme=light] .tags span{background:rgba(15,23,42,.04);color:#3d4a5c}
-[data-theme=light] .experience-content strong{color:#2a3646}
-[data-theme=light] .meter{background:rgba(15,23,42,.1)}
-[data-theme=light] .lab,[data-theme=light] .cv-box,[data-theme=light] .shot{background:#fff}
+/* 7. PROJETS */
+.group-title{font-size:1.3rem;margin:0 0 18px}
+.group-title:not(:first-of-type){margin-top:56px}
+
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.projects-grid>*{min-width:0} /* évite qu'une carte élargisse toute la page sur téléphone */
+
+.project-card{border:1px solid var(--border);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.035),var(--card));padding:22px;display:flex;flex-direction:column;transition:border-color .3s}
+.project-card:hover{border-color:rgba(85,214,190,.45)}
+.project-card.featured{grid-column:1/-1}
+.project-number{color:var(--accent);font:600 .8rem "JetBrains Mono",monospace}
+.project-type{color:var(--muted);font-size:.78rem;margin:2px 0 8px}
+.project-card h3{margin-bottom:8px}
+.project-card p:not(.project-type){color:var(--muted);font-size:.92rem}
+.project-card .btn{align-self:flex-start}
+
+/* Capture d'écran cliquable : masquée quand la carte contient un lab ou une maquette */
+.shot{order:-1;border:1px solid var(--border);border-radius:10px;overflow:hidden;padding:0;margin-bottom:18px;background:#0a1119;cursor:zoom-in}
+.shot img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+.shot:hover img{transform:scale(1.04)}
+.project-card:has(>[data-state],>.mock-web,>.mock-con,>.mock-py) .shot{display:none}
+
+/* Agrandissement d'une capture */
+.lightbox{position:fixed;inset:0;z-index:300;background:rgba(4,7,12,.92);display:grid;place-items:center;padding:4%;opacity:0;pointer-events:none;transition:opacity .3s;cursor:zoom-out}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:100%;max-height:100%;border-radius:10px}
+
+/* 8.1 Cadre commun */
+.lab,.project-card>[data-state]{border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px}
+.lab svg,.project-card>[data-state] svg{display:block;width:100%;height:auto}
+.project-card>[data-state]{order:-1;margin-bottom:22px}
+.project-card>[data-state] svg{max-width:760px;margin:auto}
+
+/* 8.2 Boutons de filtre et légende */
+.lab-tools{display:flex;gap:8px;margin-bottom:20px}
+.lab-tools button{background:none;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:8px 14px;font:inherit;font-size:.85rem;cursor:pointer}
+.lab-tools button[aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.project-card .lab-tools{flex-wrap:wrap}
+.project-card .lab-tools button{display:inline-flex;align-items:center;gap:8px}
+.lab-tools .dot{width:18px;height:3px;border-radius:2px}
+.dot-a,.dot-s,.dot-n,.dot-q,.dot-m,.dot-p{background:var(--flow-a)}  /* pastille bleue */
+.dot-j,.dot-v,.dot-d,.dot-w,.dot-u,.dot-g{background:var(--flow-b)}  /* pastille verte */
+
+/* 8.3 Texte d'explication affiché au clic sur une machine */
+.lab-info,#lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}
+.lab-info strong,#lab-info strong{color:var(--text);margin-right:6px}
+
+
+.wire{fill:none!important;stroke-width:2;stroke-dasharray:6 6;animation:dash 1s linear infinite}
+.wl{font:12px "JetBrains Mono",monospace;text-anchor:middle}
+.wl.ls{text-anchor:start}
+.wl.le{text-anchor:end}
+.no-x{fill:none;stroke:var(--flow-deny);stroke-width:2.8;stroke-linecap:round}
+
+:is(.wire,.pkt):is(.f-log,.f-auto,.f-sig,.f-net,.f-dns,.f-adm,.f-pre){stroke:var(--flow-a);fill:var(--flow-a)}
+:is(.wire,.pkt):is(.f-dep,.f-jr,.f-vx,.f-dom,.f-web,.f-auth,.f-ok){stroke:var(--flow-b);fill:var(--flow-b)}
+:is(.wire,.pkt).f-no{stroke:var(--flow-deny);fill:var(--flow-deny)}
+.wl:is(.f-log,.f-auto,.f-sig,.f-net,.f-dns,.f-adm,.f-pre){fill:var(--flow-a)}
+.wl:is(.f-dep,.f-jr,.f-vx,.f-dom,.f-web,.f-auth,.f-ok){fill:var(--flow-b)}
+.wl.f-no{fill:var(--flow-deny)}
+.arr-a,.arr-s,.arr-n,.arr-q,.arr-m,.arr-p{fill:var(--flow-a)}
+.arr-j,.arr-v,.arr-d,.arr-w,.arr-u,.arr-g{fill:var(--flow-b)}
+
+[class*=" f-"]{transition:opacity .4s} /* tout élément « f-… » s'atténue en douceur */
+
+/* Un bouton de flux bleu atténue les flux verts, et inversement */
+:is([data-state=auto],[data-state=sig],[data-state=net],[data-state=dns],[data-state=adm],[data-state=pre],[data-flow=logs]) :is(.f-dep,.f-jr,.f-vx,.f-dom,.f-web,.f-auth,.f-ok){opacity:.12}
+:is([data-state=jr],[data-state=vx],[data-state=dom],[data-state=web],[data-state=auth],[data-state=post],[data-flow=deploy]) :is(.f-log,.f-auto,.f-sig,.f-net,.f-dns,.f-adm,.f-pre,.f-no){opacity:.12}
+
+/* 8.5 Machines (rectangles cliquables) */
+.node{cursor:pointer;outline:none}
+.node rect{fill:var(--card);stroke:var(--border);stroke-width:1.5;transition:.3s}
+.node:hover rect,.node:focus-visible rect,.node.on rect{stroke:var(--accent);fill:#12202a}
+.node text{fill:var(--text);font:600 15px Inter,sans-serif;text-anchor:middle}
+.node .sub{fill:var(--muted);font:12px "JetBrains Mono",monospace}
 [data-theme=light] .node rect{fill:#fff}
 [data-theme=light] .node:hover rect,[data-theme=light] .node.on rect{fill:#e9f7f4}
-@media(max-width:850px){[data-theme=light] .nav-links{background:#f6f8fb}}
-/* Le terminal et le visuel des expériences restent sombres dans les deux modes */
-[data-theme=light] .terminal-card,[data-theme=light] .experience-visual{--text:#edf2f7;--muted:#9aa8b8;--accent:#55d6be;--accent-2:#6ea8fe;--border:rgba(255,255,255,.09)}
 
-/* Lab du projet 01 */
-.lab-mini{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--log:var(--accent)}
-[data-theme=light] .lab-mini{background:#fff}
-.lab-mini svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
-.lab-mini .lab-tools{flex-wrap:wrap}.lab-mini .lab-tools button{display:inline-flex;align-items:center;gap:8px}
-.lab-mini .dot{width:18px;height:3px;border-radius:2px}.dot-a{background:var(--accent-2)}.dot-j{background:var(--log)}
-.lab-mini .f-auto.wire,.lab-mini .pkt.f-auto{stroke:var(--accent-2);fill:var(--accent-2)}
-.lab-mini .f-jr.wire,.lab-mini .pkt.f-jr{stroke:var(--log);fill:var(--log)}
-.arr-a{fill:var(--accent-2)}.arr-j{fill:var(--accent)}
-.lab-mini .f-auto,.lab-mini .f-jr{transition:opacity .4s}
-.lab-mini[data-state=auto] .f-jr,.lab-mini[data-state=jr] .f-auto{opacity:.12}
-.lab-mini .n-logs rect{fill:rgba(85,214,190,.14);stroke:var(--log)}
-.lab-mini .n-noc rect{fill:rgba(110,168,254,.12);stroke:var(--accent-2)}
-.lab-mini .n-farm rect.box{fill:rgba(110,168,254,.07);stroke:var(--accent-2)}
-.lab-mini .n-farm rect.srv{fill:var(--bg);stroke:var(--border)}
-.lab-mini .ic{fill:var(--log)}
-.lab-mini .node:hover rect.box,.lab-mini .node:hover>rect:first-child,.lab-mini .node.on rect.box,.lab-mini .node.on>rect:first-child{stroke-width:2.8}
-.lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-info strong{color:var(--text);margin-right:6px}
-.project-card:has(.lab-mini) .shot{display:none}
-@media(max-width:700px){.lab-mini{overflow-x:auto}.lab-mini svg{min-width:560px}}
+/* Couleurs par type de machine (doit rester après les règles ci-dessus) */
+.node:is(.n-noc,.n-ast,.n-net,.n-dns) rect{fill:rgba(110,168,254,.12);stroke:var(--flow-a)}
+.node:is(.n-sp,.n-dom,.n-lamp) rect{fill:rgba(85,214,190,.1);stroke:var(--flow-b)}
+.node.n-logs rect{fill:rgba(85,214,190,.14);stroke:var(--flow-b)}
+.node.n-farm rect.box{fill:rgba(110,168,254,.07);stroke:var(--flow-a)}
+.node.n-farm rect.srv{fill:var(--bg);stroke:var(--border)}
+.node:is(.n-srv,.n-cl,.n-box,.n-sec) rect{fill:var(--card);stroke:var(--muted)}
+.node.n-sec rect{stroke-dasharray:5 4}
+.node:is(.n-dc,.n-fw) rect{stroke:var(--text);stroke-opacity:.55}
+.ic{fill:var(--flow-b)}
 
-/* Lab du projet 02 */
-.lab-voip{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--sig:var(--accent-2);--vx:var(--accent)}
-[data-theme=light] .lab-voip{background:#fff}
-.lab-voip svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
-.lab-voip .lab-tools{flex-wrap:wrap}.lab-voip .lab-tools button{display:inline-flex;align-items:center;gap:8px}
-.lab-voip .dot{width:18px;height:3px;border-radius:2px}.lab-voip .dot-s{background:var(--sig)}.lab-voip .dot-v{background:var(--vx)}
-.lab-voip .f-sig.wire,.lab-voip .pkt.f-sig{stroke:var(--sig);fill:var(--sig)}
-.lab-voip .f-vx.wire,.lab-voip .pkt.f-vx{stroke:var(--vx);fill:var(--vx)}
-.lab-voip .wl.f-sig{fill:var(--sig)}.lab-voip .wl.f-vx{fill:var(--vx)}
-.arr-s{fill:var(--accent-2)}.arr-v{fill:var(--accent)}
-.lab-voip .f-sig,.lab-voip .f-vx{transition:opacity .4s}
-.lab-voip[data-state=sig] .f-vx,.lab-voip[data-state=vx] .f-sig{opacity:.12}
-.lab-voip .n-ast rect{fill:rgba(110,168,254,.12);stroke:var(--accent-2)}
-.lab-voip .n-sp rect{fill:rgba(85,214,190,.1);stroke:var(--accent)}
-.lab-voip .n-sec rect{fill:var(--card);stroke:var(--muted);stroke-dasharray:5 4}
-.lab-voip .node:hover rect,.lab-voip .node.on rect{stroke-width:2.8}
-.lab-voip .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-voip .lab-info strong{color:var(--text);margin-right:6px}
-.project-card:has(.lab-voip) .shot{display:none}
-@media(max-width:700px){.lab-voip{overflow-x:auto}.lab-voip svg{min-width:560px}}
+/* Survol et sélection d'une machine dans un projet */
+.project-card .node:hover>rect:first-child,.project-card .node.on>rect:first-child{stroke-width:2.8}
+.project-card .node.n-box:hover>rect,.project-card .node.n-box.on>rect{stroke:var(--accent);stroke-opacity:1}
 
-/* Lab du projet 03 */
-.lab-ad{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--net:var(--accent-2);--dom:var(--accent)}
-[data-theme=light] .lab-ad{background:#fff}
-.lab-ad svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
-.lab-ad .lab-tools{flex-wrap:wrap}.lab-ad .lab-tools button{display:inline-flex;align-items:center;gap:8px}
-.lab-ad .dot{width:18px;height:3px;border-radius:2px}.lab-ad .dot-n{background:var(--net)}.lab-ad .dot-d{background:var(--dom)}
-.lab-ad .f-net.wire,.lab-ad .pkt.f-net{stroke:var(--net);fill:var(--net)}
-.lab-ad .f-dom.wire,.lab-ad .pkt.f-dom{stroke:var(--dom);fill:var(--dom)}
-.lab-ad .wl.f-net{fill:var(--net)}.lab-ad .wl.f-dom{fill:var(--dom)}.lab-ad .wl.ls{text-anchor:start}
-.arr-n{fill:var(--accent-2)}.arr-d{fill:var(--accent)}
-.lab-ad .f-net,.lab-ad .f-dom{transition:opacity .4s}
-.lab-ad[data-state=net] .f-dom,.lab-ad[data-state=dom] .f-net{opacity:.12}
-.lab-ad .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
-.lab-ad .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
-.lab-ad .link{fill:none;stroke:var(--muted);stroke-width:1.5;opacity:.5}
-.lab-ad .n-srv rect,.lab-ad .n-cl rect{fill:var(--card);stroke:var(--muted)}
-.lab-ad .n-net rect{fill:rgba(110,168,254,.12);stroke:var(--net)}
-.lab-ad .n-dom rect{fill:rgba(85,214,190,.1);stroke:var(--dom)}
-.lab-ad .node:hover rect,.lab-ad .node.on rect{stroke-width:2.8}
-.lab-ad .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-ad .lab-info strong{color:var(--text);margin-right:6px}
-.project-card:has(.lab-ad) .shot{display:none}
-@media(max-width:700px){.lab-ad{overflow-x:auto}.lab-ad svg{min-width:560px}}
+/* 8.6 Décor : cadres « réseau virtualisé » et liens */
+.project-card>[data-state] .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
+.project-card>[data-state] .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
+.project-card>[data-state] .link{fill:none;stroke:var(--muted);stroke-width:1.5;opacity:.5}
 
-/* Lab du projet 04 */
-.lab-lamp{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--q:var(--accent-2);--w:var(--accent)}
-[data-theme=light] .lab-lamp{background:#fff}
-.lab-lamp svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
-.lab-lamp .lab-tools{flex-wrap:wrap}.lab-lamp .lab-tools button{display:inline-flex;align-items:center;gap:8px}
-.lab-lamp .dot{width:18px;height:3px;border-radius:2px}.lab-lamp .dot-q{background:var(--q)}.lab-lamp .dot-w{background:var(--w)}
-.lab-lamp .f-dns.wire,.lab-lamp .pkt.f-dns{stroke:var(--q);fill:var(--q)}
-.lab-lamp .f-web.wire,.lab-lamp .pkt.f-web{stroke:var(--w);fill:var(--w)}
-.lab-lamp .wl.f-dns{fill:var(--q)}.lab-lamp .wl.f-web{fill:var(--w)}
-.arr-q{fill:var(--accent-2)}.arr-w{fill:var(--accent)}
-.lab-lamp .f-dns,.lab-lamp .f-web{transition:opacity .4s}
-.lab-lamp[data-state=dns] .f-web,.lab-lamp[data-state=web] .f-dns{opacity:.12}
-.lab-lamp .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
-.lab-lamp .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
-.lab-lamp .n-cl rect{fill:var(--card);stroke:var(--muted)}
-.lab-lamp .n-dns rect{fill:rgba(110,168,254,.12);stroke:var(--q)}
-.lab-lamp .n-lamp rect{fill:rgba(85,214,190,.1);stroke:var(--w)}
-.lab-lamp .node:hover rect,.lab-lamp .node.on rect{stroke-width:2.8}
-.lab-lamp .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-lamp .lab-info strong{color:var(--text);margin-right:6px}
-.project-card:has(.lab-lamp) .shot{display:none}
-@media(max-width:700px){.lab-lamp{overflow-x:auto}.lab-lamp svg{min-width:560px}}
 
-/* Lab du projet 05 */
-.lab-dual{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--adm:var(--accent-2);--auth:var(--accent)}
-[data-theme=light] .lab-dual{background:#fff}
-.lab-dual svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
-.lab-dual .lab-tools{flex-wrap:wrap}.lab-dual .lab-tools button{display:inline-flex;align-items:center;gap:8px}
-.lab-dual .dot{width:18px;height:3px;border-radius:2px}.lab-dual .dot-m{background:var(--adm)}.lab-dual .dot-u{background:var(--auth)}
-.lab-dual .f-adm.wire,.lab-dual .pkt.f-adm{stroke:var(--adm);fill:var(--adm)}
-.lab-dual .f-auth.wire,.lab-dual .pkt.f-auth{stroke:var(--auth);fill:var(--auth)}
-.lab-dual .wl.f-adm{fill:var(--adm)}.lab-dual .wl.f-auth{fill:var(--auth)}.lab-dual .wl.ls{text-anchor:start}.lab-dual .wl.le{text-anchor:end}
-.arr-m{fill:var(--accent-2)}.arr-u{fill:var(--accent)}
-.lab-dual .f-adm,.lab-dual .f-auth{transition:opacity .4s}
-.lab-dual[data-state=adm] .f-auth,.lab-dual[data-state=auth] .f-adm{opacity:.12}
-.lab-dual .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
-.lab-dual .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
-.lab-dual .n-box rect{fill:var(--card);stroke:var(--muted)}
-.lab-dual .n-dc rect{stroke:var(--text);stroke-opacity:.55}
-.lab-dual .node:hover rect,.lab-dual .node.on rect{stroke:var(--accent);stroke-opacity:1;stroke-width:2.8}
-.lab-dual .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-dual .lab-info strong{color:var(--text);margin-right:6px}
-.project-card:has(.lab-dual) .shot{display:none}
-@media(max-width:700px){.lab-dual{overflow-x:auto}.lab-dual svg{min-width:560px}}
+/* 9. MAQUETTES (illustrations dessinées en SVG dans les cartes dev) */
+.mock-web,.mock-con,.mock-py{order:-1;margin-bottom:18px;border-radius:14px;overflow:hidden}
+.mock-con{border-radius:12px}
+.mock-web svg,.mock-con svg,.mock-py svg{display:block;width:100%;height:auto}
+.mock-web .mw-cur,.mock-con .mc-cur,.mock-py .mp-cur{animation:mwblink 1s steps(1) infinite}
 
-/* Lab du projet 06 */
-.lab-pfs{order:-1;border:1px solid var(--border);border-radius:18px;background:#0a1119;padding:20px;margin-bottom:22px;--pre:var(--accent-2);--ok:var(--accent);--deny:#f07178}
-[data-theme=light] .lab-pfs{background:#fff;--deny:#d64550}
-.lab-pfs svg{display:block;width:100%;max-width:760px;height:auto;margin:auto}
-.lab-pfs .lab-tools{flex-wrap:wrap}.lab-pfs .lab-tools button{display:inline-flex;align-items:center;gap:8px}
-.lab-pfs .dot{width:18px;height:3px;border-radius:2px}.lab-pfs .dot-p{background:var(--pre)}.lab-pfs .dot-g{background:var(--ok)}
-.lab-pfs .f-pre.wire,.lab-pfs .pkt.f-pre{stroke:var(--pre);fill:var(--pre)}
-.lab-pfs .f-ok.wire,.lab-pfs .pkt.f-ok{stroke:var(--ok);fill:var(--ok)}
-.lab-pfs .f-no.wire,.lab-pfs .pkt.f-no{stroke:var(--deny);fill:var(--deny)}
-.lab-pfs .no-x{fill:none;stroke:var(--deny);stroke-width:2.8;stroke-linecap:round}
-.lab-pfs .wl.f-pre{fill:var(--pre)}.lab-pfs .wl.f-ok{fill:var(--ok)}.lab-pfs .wl.f-no{fill:var(--deny)}
-.arr-p{fill:var(--accent-2)}.arr-g{fill:var(--accent)}
-.lab-pfs .f-pre,.lab-pfs .f-no,.lab-pfs .f-ok{transition:opacity .4s}
-.lab-pfs[data-state=pre] .f-ok,.lab-pfs[data-state=post] .f-pre,.lab-pfs[data-state=post] .f-no{opacity:.12}
-.lab-pfs .vm{fill:none;stroke:var(--border);stroke-width:1.5;stroke-dasharray:6 5}
-.lab-pfs .vml{fill:var(--muted);font:12px "JetBrains Mono",monospace}
-.lab-pfs .n-box rect{fill:var(--card);stroke:var(--muted)}
-.lab-pfs .n-fw rect{stroke:var(--text);stroke-opacity:.55}
-.lab-pfs .node:hover rect,.lab-pfs .node.on rect{stroke:var(--accent);stroke-opacity:1;stroke-width:2.8}
-.lab-pfs .lab-info{min-height:3em;margin-top:14px;color:var(--muted);font-size:.92rem}.lab-pfs .lab-info strong{color:var(--text);margin-right:6px}
-.project-card:has(.lab-pfs) .shot{display:none}
-@media(max-width:700px){.lab-pfs{overflow-x:auto}.lab-pfs svg{min-width:560px}}
-
-/* Maquette navigateur (projet DEV 01) */
-.mock-web{order:-1;margin-bottom:18px;border-radius:14px;overflow:hidden}
-.mock-web svg{display:block;width:100%;height:auto}
+/* 9.1 Navigateur (suit le thème clair / sombre) */
 .mock-web .mw-win{fill:var(--bg);stroke:var(--border);stroke-width:1.5}
 .mock-web .mw-bar{fill:var(--bg-soft);stroke:var(--border);stroke-width:1.5}
 .mock-web .mw-url{fill:var(--bg);stroke:var(--border)}
@@ -195,42 +177,123 @@ body{transition:background .3s,color .3s}
 .mock-web .mw-h2{font:700 14px Inter,sans-serif;fill:var(--text)}
 .mock-web .mw-btn{fill:var(--accent)}
 .mock-web .mw-btn-t{font:600 11.5px Inter,sans-serif;fill:#04141a}
-[data-theme=light] .mock-web .mw-btn-t{fill:#fff}
 .mock-web .mw-txt{font:600 11.5px Inter,sans-serif;fill:var(--text)}
 .mock-web .mw-ct{font-size:12px}
 .mock-web .mw-term{fill:#0a1119;stroke:var(--border);stroke-width:1.5}
-.mock-web .mw-cur{fill:#55d6be;animation:mwblink 1s steps(1) infinite}
+.mock-web .mw-cur{fill:#55d6be}
 .mock-web .mw-card rect{fill:var(--card);stroke:var(--border);stroke-width:1.5}
-.mock-web .mw-track rect{fill:var(--border)}
+.mock-web .mw-track rect,.mock-web .mw-ph rect{fill:var(--border)}
 .mock-web .mw-fill rect{fill:var(--accent)}
-.mock-web .mw-ph rect{fill:var(--border)}
-@keyframes mwblink{50%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.mock-web .mw-cur{animation:none}}
-.project-card:has(.mock-web) .shot{display:none}
+[data-theme=light] .mock-web .mw-btn-t{fill:#fff}
 
-/* Maquette console (projet DEV 02) */
-.mock-con{order:-1;margin-bottom:18px;border-radius:12px;overflow:hidden}
-.mock-con svg{display:block;width:100%;height:auto}
+/* 9.2 Console Windows (toujours sombre) */
 .mock-con .mc-win{fill:#0c0c0c;stroke:var(--border);stroke-width:1.5}
 .mock-con .mc-bar{fill:#1b1b1b}
 .mock-con .mc-title{font:12px "Segoe UI",Inter,sans-serif;fill:#cccccc}
 .mock-con .mc-t{font:16px "JetBrains Mono",Consolas,monospace;fill:#cccccc}
-.mock-con .mc-y{fill:#f9f1a5}.mock-con .mc-c{fill:#61d6d6}.mock-con .mc-r{fill:#e74856}.mock-con .mc-g{fill:#3fcf8e}.mock-con .mc-w{fill:#fff}
-.mock-con .mc-cur{fill:#cccccc;animation:mwblink 1s steps(1) infinite}
-@keyframes mwblink{50%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.mock-con .mc-cur{animation:none}}
-.project-card:has(.mock-con) .shot{display:none}
+.mock-con .mc-y{fill:#f9f1a5}
+.mock-con .mc-c{fill:#61d6d6}
+.mock-con .mc-r{fill:#e74856}
+.mock-con .mc-g{fill:#3fcf8e}
+.mock-con .mc-w{fill:#fff}
+.mock-con .mc-cur{fill:#cccccc}
 
-/* Chapeau diplôme */
-.experience-visual svg.cap{position:relative;z-index:2;width:6rem;height:6rem;color:var(--accent);animation:float 4s ease-in-out infinite}
-@media(max-width:600px){.experience-visual svg.cap{width:4.5rem;height:4.5rem}}
-@media(prefers-reduced-motion:reduce){.experience-visual svg.cap{animation:none}}
+/* 9.3 Éditeur de code Python (toujours sombre) */
+.mock-py .mp-win{fill:#0d1117;stroke:var(--border);stroke-width:1.5}
+.mock-py :is(.mp-tab,.mp-edit){fill:#0d1117}
+.mock-py :is(.mp-side,.mp-term){fill:#0a0e14}
+.mock-py .mp-bar{fill:#161b22}
+.mock-py .mp-sel{fill:#1b2431}
+.mock-py .mp-ui{font:12px Inter,sans-serif;fill:#c9d1d9}
+.mock-py .mp-b{font-weight:600}
+.mock-py .mp-cap{font:600 10px Inter,sans-serif;fill:#8b949e;letter-spacing:.08em}
+.mock-py .mp-ln{font:13px "JetBrains Mono",Consolas,monospace;fill:#6e7681}
+.mock-py .mp-code{font:14px "JetBrains Mono",Consolas,monospace;fill:#c9d1d9}
+.mock-py .mp-tx{font:13px "JetBrains Mono",Consolas,monospace;fill:#c9d1d9}
+.mock-py .k{fill:#ff7b72}
+.mock-py .f{fill:#d2a8ff}
+.mock-py .s{fill:#a5d6ff}
+.mock-py .n{fill:#79c0ff}
+.mock-py .g{fill:#3fcf8e}
+.mock-py .mp-cur{fill:#c9d1d9}
 
-/* Correctif mobile : une carte projet ne doit plus élargir toute la page */
-.projects-grid>*{min-width:0}
-@media(max-width:850px){.projects-grid{grid-template-columns:minmax(0,1fr)}}
 
+/* 10. PARCOURS */
+.experience:before{box-shadow:0 0 0 7px var(--bg),0 0 25px rgba(85,214,190,.5)}
+.experience-visual svg.cap{
+  position:relative;
+  z-index:2;
+  width:6rem;
+  height:6rem;
+  color:var(--accent);
+  animation:float 4s ease-in-out infinite
+} /* chapeau de diplômé */
+
+
+/* 11. CV, CONTACT ET PIED DE PAGE  */
+.cv-box{
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  background:#0a1119;
+  margin-bottom:22px
+}
+.cv-frame{display:block;width:100%;height:min(80vh,760px)}
+.cv-box p{padding:30px;color:var(--muted)}
+.cv-box a{color:var(--accent)}
+
+.contact-box{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;border:1px solid var(--border);border-radius:20px;padding:44px;background:var(--card)}
+.contact-box p:not(.eyebrow){color:var(--muted);margin-top:12px}
+.contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.contact-links a:not(.btn):hover{color:var(--accent)}
+
+.footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.85rem}
+.footer-content{display:flex;justify-content:space-between}
+
+
+/* 12. THÈME CLAIR / SOMBRE */
+body{transition:background .3s,color .3s}
+.theme-toggle{background:none;border:1px solid var(--border);color:var(--text);border-radius:8px;width:38px;height:38px;font-size:1rem;cursor:pointer;margin-left:16px;transition:border-color .25s}
+.theme-toggle:hover{border-color:var(--accent)}
+
+[data-theme=light]{color-scheme:light;--bg:#f6f8fb;--bg-soft:#eaeff5;--card:#ffffff;--border:rgba(15,23,42,.12);--text:#0f1722;--muted:#4f5d6e;--accent:#0d8a76;--accent-2:#2b63c9;--flow-deny:#d64550}
+[data-theme=light] .header{background:rgba(246,248,251,.85)}
+[data-theme=light] .btn-primary{color:#fff}
+[data-theme=light] .tech-logo{background:rgba(15,23,42,.04)}
+[data-theme=light] .tags span{background:rgba(15,23,42,.04);color:#3d4a5c}
+[data-theme=light] .experience-content strong{color:#2a3646}
+[data-theme=light] .meter{background:rgba(15,23,42,.1)}
+[data-theme=light] :is(.lab,.cv-box,.shot,.project-card>[data-state]){background:#fff}
+/* Le terminal et le visuel des expériences restent sombres dans les deux modes */
+[data-theme=light] :is(.terminal-card,.experience-visual){--text:#edf2f7;--muted:#9aa8b8;--accent:#55d6be;--accent-2:#6ea8fe;--border:rgba(255,255,255,.09)}
+
+
+/* 13. RESPONSIVE */
+@media(max-width:850px){
+  .hero-grid,.about-grid,.contact-box{grid-template-columns:1fr}
+  .counters{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:minmax(0,1fr)}
+  .about-card{grid-template-columns:repeat(2,1fr)}
+  .photo{max-width:320px}
+  .theme-toggle{margin-left:auto;margin-right:12px}
+  [data-theme=light] .nav-links{background:#f6f8fb}
+}
+/* Téléphone : les schémas gardent une largeur lisible et défilent sur le côté */
 @media(max-width:700px){
-  .lab-mini::before,.lab-voip::before,.lab-ad::before,.lab-lamp::before,.lab-dual::before,.lab-pfs::before{content:"↔ Fais glisser le schéma";display:block;margin-bottom:10px;font-size:.75rem;color:var(--muted)}
+  .project-card>[data-state]{overflow-x:auto}
+  .project-card>[data-state] svg{min-width:560px}
+  .project-card>[data-state]::before{content:"↔ Fais glisser le schéma";display:block;margin-bottom:10px;font-size:.75rem;color:var(--muted)}
+}
+@media(max-width:600px){
+  .experience-visual svg.cap{width:4.5rem;height:4.5rem}
 }
 
+
+/* 14. ANIMATIONS RÉDUITES (visiteurs qui ont désactivé les animations) */
+@media(prefers-reduced-motion:reduce){
+  .pkt{display:none}
+  .wire,.cursor,.mock-web .mw-cur,.mock-con .mc-cur,.mock-py .mp-cur,.experience-visual svg.cap{animation:none}
+  .section:before{transform:translateX(-50%) scaleX(1);transition:none}
+  .meter i{transition:none}
+  html{scroll-behavior:auto}
+}
